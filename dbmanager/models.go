@@ -6,6 +6,7 @@ type DBConfig struct {
 	Pass     string `json:"pass"`
 	Port     string `json:"port"`
 	Database string `json:"database"`
+	FileName string
 }
 
 type DbModel struct {

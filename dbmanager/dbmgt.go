@@ -6,9 +6,9 @@ import (
 	"os"
 )
 
-func loadConfig() DBConfig {
+func loadConfig(s string) DBConfig {
 	var config DBConfig
-	configFile, err := os.Open("./configuration/DB.json")
+	configFile, err := os.Open("./configuration/" + s + ".json")
 	defer configFile.Close()
 	if err != nil {
 		fmt.Println(err.Error())
@@ -18,9 +18,15 @@ func loadConfig() DBConfig {
 	return config
 }
 
-func GetConfig() DBConfig {
+func GetConfig(str string) DBConfig {
 	fmt.Println("Load Config")
-	return loadConfig()
+	var confile string
+	if str == "" {
+		confile = "DB"
+	} else {
+		confile = str
+	}
+	return loadConfig(confile)
 }
 
 func Test() {
