@@ -15,4 +15,5 @@
 # vendor/
 
 # mock DB
-/configuration/DB_prd.json
+/configuration/db_prd.json
+	      
