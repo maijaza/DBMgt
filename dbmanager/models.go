@@ -1,11 +1,11 @@
 package dbmanager
 
-type DbConfig struct {
-	Server   string
-	User     string
-	Pass     string
-	DbName   string
-	FileName string
+type DBConfig struct {
+	Host     string `json:"host"`
+	User     string `json:"user"`
+	Pass     string `json:"pass"`
+	Port     string `json:"port"`
+	Database string `json:"database"`
 }
 
 type DbModel struct {

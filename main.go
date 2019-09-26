@@ -9,7 +9,8 @@ import (
 func main() {
 	fmt.Println("start dbMgt package.")
 	//dbmanager.Test()
-	db := new(dbmanager.DbConfig)
-	fmt.Println("FileName " + db.FileName)
+	db := new(dbmanager.DBConfig)
+	*db = dbmanager.GetConfig()
+	fmt.Println("FileName " + db.Database)
 
 }
